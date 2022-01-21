@@ -18,7 +18,6 @@
     </head>
 
     <body>
-
         <main>
 
             <header>
@@ -44,7 +43,9 @@
                     <p>
                         Découvrez des restaurants d'exception, séléctionnés par nos soins.
                     </p>
-                    <button type="submit" class="boutonprésentation"><h3>Explorez nos restaurants</h3</button>
+                    <p class="pbouton">
+                        <a href="#" class="boutonprésentation">Explorez nos restaurants</a>
+                    </p>
                 </div>
 
                 <div class="fonctionnement">
@@ -53,14 +54,14 @@
                         </h2>
                     <ul>
                         <li>
-                            <div class="choixrestau">
+                            <div class="sub-fonc">
                                 <span>1</span>
                                 <i class="fas fa-mobile-alt"></i>
                                 <h3>Choississez un restaurant</h3>
                             </div>
                         </li>
                         <li>
-                            <div class="compomenu">
+                            <div class="sub-fonc">
                                 <span>2</span>
                                 <i class="fas fa-list-ul"></i>
                                 <h3>Composez votre menu</h3>
@@ -68,7 +69,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="dégustrestau">
+                            <div class="sub-fonc">
                                 <span>3</span>
                                 <i class="fas fa-store"></i>
                                 <h3>Dégustez au restaurant</h3>
@@ -78,58 +79,66 @@
                 </div>
                 
             <section>
-                <div id="Restaurant">
-                    <div class="sub-restau">
-                        <a href="#"> <!--A modifier avec lien pour html palette-->
-                            <div class="new-restau">
-                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image restaurant">
-                                <p>Nouveau</p>
-                            </div>
-                            <div class="sub-restaurant-info">
-                                <h3>La palette du gout</h3>
-                                <p>Ménilmontant</p>
-                                <div class="sub-restaurant-like">
+                <div id="restaurant">
+                    <h2>Restaurants</h2>
+                    <a href="#"> <!--A modifier avec lien pour html palette-->
+                        <div class="sub-restau">
+                            <span class="sub-restau-new">Nouveau</span>
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image restaurant">
+                            <div class="sub-restau-info">
+                                <div class="sub-restau-info-like">
+                                    <h3>La palette du gout</h3>
                                     <i class="far fa-heart"></i>
                                 </div>
+                                <div class="sub-restau-info-loca">
+                                    <p>Ménilmontant</p>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="sub-restau">
-                        <a href="#"> <!-- A modifier avec lien pour html note-->
+                        </div>
+                    </a>
+                    <a href="#"> <!-- A modifier avec lien pour html note-->
+                        <div class="sub-restau">
                             <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="image restaurant">
-                            <div class="sub-restaurant-info">
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
-                                <div class="sub-restaurant-like">
+                            <span class="sub-restau-new">Nouveau</span>
+                            <div class="sub-restau-info">
+                                <div class="sub-restau-info-like">
+                                    <h3>La note enchantée</h3>
                                     <i class="far fa-heart"></i>
                                 </div>
+                                <div class="sub-restau-info-loca">
+                                    <p>Charonne</p>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="sub-restau">
-                        <a href="#"> <!-- A modifier avec lien pour html a la francaise-->
+                        </div>
+                    </a>
+                    <a href="#"> <!-- A modifier avec lien pour html a la francaise-->
+                        <div class="sub-restau">
                             <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="image restaurant">
-                            <div class="sub-restaurant-info">
-                                <h3>À la française</h3>
-                                <p>Cité Rouge</p>
-                                <div class="sub-restaurant-like">
+                            <div class="sub-restau-info">
+                                <div class="sub-restau-info-like">
+                                    <h3>À la française</h3>
                                     <i class="far fa-heart"></i>
                                 </div>
+                                <div class="sub-restau-info-loca">
+                                    <p>Cité Rouge</p>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="sub-restau">
-                        <a href="#"> <!-- A modifier avec lien pour html le délice-->
+                        </div>
+                    </a>
+                    <a href="#"> <!-- A modifier avec lien pour html le délice-->
+                        <div class="sub-restau">
                             <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="image restautant">
-                            <div class="sub-restaurant-info">
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
-                                <div class="sub-restaurant-like">
+                            <div class="sub-restau-info">
+                                <div class="sub-restau-info-like">
+                                    <h3>Le délice des sens</h3>
                                     <i class="far fa-heart"></i>
                                 </div>
+                                <div class="sub-restau-info-loca">
+                                    <p>Folie-Méricourt</p>
+                                </div>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </section>
         </main>
@@ -137,7 +146,7 @@
             <ul>
                 <li><a href="desktop.html"><img src="images/logo/ohmyfood@2x.svg" alt="logo"></a></li>
                 <li><a href="#">
-                        <div class="propo-restau">
+                        <div class="footer div">
                             <i class="fas fa-utensils"></i>
                             <p>Proposez un restaurant</p>
                         </div>
@@ -145,14 +154,14 @@
                 </li>
                 <li>   
                     <a href="#">
-                        <div class="partenaire">
-                            <i class="fas fa-handshake"></i>
+                        <div class="footer div">
+                            <i class="fas fa-hands-helping"></i>
                             <p>Devenir partenaire</p>
                         </div>
                     </a>
                 </li>
                 <li><a href="#">Mentions légales</a></li>
-                <li><a href="mailto:#">Contact</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
             </ul>
 
         </footer>

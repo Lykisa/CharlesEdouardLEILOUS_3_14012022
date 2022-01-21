@@ -1,38 +1,46 @@
 @charset "UTF-8";
 /* VARIABLE */
-:root {
-  --box-shadow-px: 5px;
-  --box-shadow-color: rgb(0 0 0 / 0.05);
-  --page-background-color: white;
-  --primary-color: #9356DC;
-  --secondary-color: #FF79DA;
-  --third-color: #99E2D0;
-  --black-color: black;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
-/* LOGO */
+main {
+  width: 100%;
+  background-color: #F2F2F2;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  box-shadow: 5px 5px 5px rgba(66, 32, 32, 0.2);
+  z-index: 2;
+}
+
 #logo {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
+  background-color: #FFFFFF;
 }
 
 /* FORMULAIRE LOCATION */
 .location {
-  margin-bottom: 20px;
+  background-color: #EAEAEA;
 }
-
 .location form {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+.location form i {
+  margin-right: 5px;
+  margin-top: 15px;
+}
+.location input {
+  background-color: #EAEAEA;
+  color: #000000;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .searchbar {
@@ -44,23 +52,181 @@ body {
 
 /* PRESENTATION */
 .présentation {
+  padding-bottom: 30px;
   justify-content: center;
   align-items: center;
+  background-color: #F2F2F2;
 }
-
 .présentation h2, .présentation p {
   text-align: center;
   width: 100%;
 }
-
 .présentation h2 {
   font-weight: bold;
+  margin-top: 0;
+  padding-top: 20px;
+}
+.présentation .pbouton {
+  margin-top: 30px;
+}
+.présentation .pbouton .boutonprésentation {
+  background: linear-gradient(70deg, #FF79DA, #9356DC);
+  text-decoration: none;
+  color: #FFFFFF;
+  border-radius: 30px;
+  padding: 10px 20px;
 }
 
-.boutonprésentation {
-  align-content: center;
-  border-radius: 30px;
-  padding: 0px 20px 0px 20px;
+/* FONCTIONNEMENT */
+.fonctionnement {
+  background-color: #FFFFFF;
 }
+.fonctionnement h2 {
+  margin-left: 15px;
+}
+.fonctionnement ul {
+  list-style-type: none;
+  padding-left: 15px;
+}
+.fonctionnement li {
+  border-radius: 20px;
+  background-color: #F2F2F2;
+}
+.fonctionnement li :hover {
+  background-color: #f4ebff;
+  border-radius: 30px;
+  color: #9356DC;
+}
+.fonctionnement li :hover h3 {
+  color: #000000;
+}
+
+.sub-fonc {
+  display: flex;
+  margin-bottom: 20px;
+}
+.sub-fonc span, .sub-fonc i, .sub-fonc h3 {
+  margin-right: 20px;
+}
+.sub-fonc span, .sub-fonc i {
+  margin-top: 20px;
+}
+.sub-fonc span {
+  background-color: #9356DC;
+  color: #FFFFFF;
+  border-radius: 50%;
+  max-height: 20px;
+  width: 20px;
+  text-align: center;
+}
+.sub-fonc i {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+/* RESTAURANT */
+#restaurant {
+  background-color: #F2F2F2;
+  padding-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#restaurant h2 {
+  margin-left: 15px;
+}
+#restaurant a {
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
+  height: 100%;
+}
+#restaurant a .sub-restau {
+  position: relative;
+  width: 100%;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px rgba(66, 32, 32, 0.2);
+}
+#restaurant a .sub-restau img {
+  width: 100%;
+  height: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#restaurant a .sub-restau span {
+  position: absolute;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 10px 15px 10px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+#restaurant a .sub-restau-info-like {
+  display: flex;
+  justify-content: space-between;
+}
+#restaurant a .sub-restau-info-like h3 {
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+#restaurant a .sub-restau-info-like i {
+  padding: 30px 30px 0 0;
+}
+#restaurant a .sub-restau-info-loca p {
+  margin-left: 15px;
+  margin-top: 0;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+}
+footer img {
+  filter: invert(100%);
+  width: 100%;
+  max-width: 100px;
+  margin-top: 20px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 0;
+}
+footer li {
+  margin: 0 0 10px 0px;
+}
+footer li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+footer div {
+  display: flex;
+}
+footer div i {
+  max-width: 13px;
+  max-height: 13px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+footer div p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* _______________________________________________________________________________________ */
+/* MENUS */
 
 /*# sourceMappingURL=mobile.css.map */
