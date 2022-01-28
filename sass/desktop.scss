@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* VARIABLE */
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-grey: #F2F2F2;
+$color-darkgrey: #EAEAEA;
+$color-button: linear-gradient(70deg, $color-secondary, $color-primary);
+$border-radius: 30px;
+$margin-bottom-titre: 20px;
+$margin-left-titre: 15px;
+$box-shadow-px: 5px;
+$box-shadow-color: rgba(66, 32, 32, 0.2);
+$border-radius-pic: 5px;
+$font-title:'Shrikhand', sans-serif;
+
+@function pastel($color) {
+    $hue: hue($color);
+    $sat: 100%;
+    $light: 96%;
+    $pastel: hsl( $hue, $sat, $light);
+    @return $pastel;
+  }
+
+                    /* PAGE ACCUEIL */
+
+.fonctionnement {
+    text-align: center;
+    ul {
+        position: relative;
+        left: 40%;
+        width: 310px;
+    }
+}
+
+#restaurant {
+    .list-restau {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    a {
+        margin: 50px;
+        .sub-restau {
+            img {
+                width: 330px;
+            }
+        }
+    }
+}
+
+                    /* PAGE RESTAURANT */
+#picrestau {
+    img {
+        max-height: 400px;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

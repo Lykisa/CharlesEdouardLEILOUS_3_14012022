@@ -1,0 +1,36 @@
+/* VARIABLE */
+/* PAGE ACCUEIL */
+.fonctionnement {
+  text-align: center;
+}
+.fonctionnement ul {
+  position: relative;
+  left: 40%;
+  width: 310px;
+}
+
+#restaurant .list-restau {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#restaurant a {
+  margin: 50px;
+}
+#restaurant a .sub-restau img {
+  width: 330px;
+}
+
+/* PAGE RESTAURANT */
+#picrestau img {
+  max-height: 400px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=desktop.css.map */
