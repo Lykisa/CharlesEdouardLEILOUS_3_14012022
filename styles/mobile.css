@@ -10,6 +10,139 @@ main {
   background-color: #F2F2F2;
 }
 
+/* LOADING SCREEN */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  background-color: #F2F2F2;
+  animation: end-load 3s ease-out both;
+}
+@-webkit-keyframes end-load {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes end-load {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+#loading-screen .loading-logo {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 35%;
+  margin: -75px 0 0 -95px;
+}
+#loading-screen .loading-logo-icons {
+  margin-top: 10px;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+#loading-screen .loading-logo-icons .fa-pizza-slice {
+  color: #9356DC;
+}
+#loading-screen .loading-logo-icons .fa-fish {
+  color: #FF79DA;
+}
+#loading-screen .loading-logo-icons .fa-ice-cream {
+  color: #99E2D0;
+}
+#loading-screen #loading {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  z-index: 50;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loading-screen #loading:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 3px solid transparent;
+  border-top-color: #FF79DA;
+  border-radius: 50%;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#loading-screen #loading::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 3px solid transparent;
+  border-top-color: #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /* HEADER */
 header {
   width: 100%;
@@ -87,11 +220,15 @@ header i {
   margin-top: 30px;
 }
 .présentation .pbouton .boutonprésentation {
-  background-image: linear-gradient(70deg, #FF79DA, #9356DC);
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   text-decoration: none;
   color: #FFFFFF;
   border-radius: 30px;
   padding: 10px 20px;
+}
+.présentation .pbouton .boutonprésentation:hover {
+  background: linear-gradient(170deg, #FF86DD, #9D66DF);
+  box-shadow: 5px 5px 5px rgba(66, 32, 32, 0.2);
 }
 
 /* FONCTIONNEMENT */
@@ -195,14 +332,54 @@ header i {
   margin-left: 15px;
   margin-bottom: 0;
 }
-#restaurant a .sub-restau-info-like i {
-  padding: 30px 30px 0 0;
+#restaurant a .sub-restau-info-like .icon {
+  position: relative;
+}
+#restaurant a .sub-restau-info-like .icon .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  z-index: -1;
+  stroke: none;
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+#restaurant a .sub-restau-info-like .icon .main {
+  margin: 30px 30px 0 0;
+}
+#restaurant a .sub-restau-info-like .icon:hover .bg {
+  animation: fade-animation 0.5s ease-in-out forwards;
+  z-index: 5;
 }
 #restaurant a .sub-restau-info-loca p {
   margin-left: 15px;
   margin-top: 0;
 }
 
+@keyframes fade-animation {
+  70% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  80% {
+    fill: linear-gradient(170deg, #FF86DD, #9D66DF);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    fill: linear-gradient(170deg, #FF79DA, #9356DC);
+    opacity: 1;
+  }
+}
 /* FOOTER */
 footer {
   background-color: #000000;
@@ -270,8 +447,29 @@ footer div p {
   margin-left: 20px;
   font-family: "Shrikhand", sans-serif;
 }
-#menu-restaurant .nom-restau i {
-  margin: 25px 30px 0 0;
+#menu-restaurant .nom-restau .icon {
+  position: relative;
+}
+#menu-restaurant .nom-restau .icon .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  z-index: -1;
+  stroke: none;
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+#menu-restaurant .nom-restau .icon .main {
+  margin: 30px 30px 0 0;
+}
+#menu-restaurant .nom-restau .icon:hover .bg {
+  animation: fade-animation 0.5s ease-in-out forwards;
+  z-index: 5;
 }
 
 .menu-choix h3 {
@@ -284,6 +482,8 @@ footer div p {
 .menu-choix .sub-choix {
   background-color: #FFFFFF;
   border-radius: 20px;
+  opacity: 0;
+  animation: fadeIn linear 1s forwards;
 }
 .menu-choix .sub-choix h4 {
   margin-left: 20px;
@@ -297,10 +497,30 @@ footer div p {
 .menu-choix .sub-choix-info p {
   margin-left: 20px;
   margin-top: 0;
+  width: 80%;
 }
 .menu-choix .sub-choix-info span {
-  margin-right: 20px;
+  margin-left: 50px;
   font-weight: bold;
+  width: 20%;
+}
+.menu-choix .sub-choix:nth-child(1) {
+  animation-delay: 0s;
+}
+.menu-choix .sub-choix:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.menu-choix .sub-choix:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=mobile.css.map */
