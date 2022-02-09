@@ -41,4 +41,9 @@
   justify-content: space-around;
 }
 
+.menu-choix .sub-choix:hover span {
+  transform: translate(-60px, 0);
+  transition-duration: 100ms;
+}
+
 /*# sourceMappingURL=desktop.css.map */
