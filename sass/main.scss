@@ -423,11 +423,9 @@ header
 
 @keyframes fade-animation {
     70%{
-        /* fill: transparent; */
         transform: scale(1);
     }
     80%{
-        /* fill: linear-gradient(170deg, $color-secondary-light, $color-primary-light); */
         transform: scale(1.1);
         opacity: 1;
     }
@@ -436,7 +434,6 @@ header
     }
     100%{
         transform: scale(1);
-        /* fill: linear-gradient(170deg, $color-secondary, $color-primary); */
         opacity: 1;
     }
 }
