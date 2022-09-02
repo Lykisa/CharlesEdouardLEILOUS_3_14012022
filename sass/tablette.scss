@@ -1,0 +1,52 @@
+/* VARIABLE */
+
+$color-primary: #9356DC;
+$color-primary-light: #9D66DF;
+$color-secondary: #FF79DA;
+$color-secondary-light: #FF86DD;
+$color-tertiary: #99E2D0;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-grey: #F2F2F2;
+$color-darkgrey: #EAEAEA;
+$border-radius: 30px;
+$margin-bottom-titre: 20px;
+$margin-left-titre: 15px;
+$box-shadow-px: 5px;
+$box-shadow-color: rgba(66, 32, 32, 0.2);
+$border-radius-pic: 5px;
+$font-title:'Shrikhand', sans-serif;
+
+@function pastel($color) {
+    $hue: hue($color);
+    $sat: 100%;
+    $light: 96%;
+    $pastel: hsl( $hue, $sat, $light);
+    @return $pastel;
+  }
+            
+body 
+{
+    font-family: 'Roboto' , sans-serif ;
+    margin: 0;
+}
+
+main
+{
+    width: 100%;
+    background-color: $color-grey;
+    
+}
+
+                    /* PAGE RESTAURANT */
+
+.menu-choix {
+    .sub-choix {
+        &:hover {
+            span {
+                transform: translate(-180px,0);
+                transition-duration: 100ms;
+            }
+        }
+    }
+}
